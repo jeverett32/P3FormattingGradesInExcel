@@ -1,4 +1,4 @@
-# John Everett, Kiera Fisher,, Aysha Entrikin, Meagan Brown, Will Francom, Zaniel Murdock
+# John Everett, Kiera Fisher, Aysha Entrikin, Meagan Brown, Will Francom, Zaniel Murdock
 # Section 004
 # Description: A program that automatically formats and summarizes the important
 # information about each of the classes they teach
