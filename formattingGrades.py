@@ -63,7 +63,7 @@ def createWorksheet(course):
     newSheet["G3"] = min_grade
     newSheet["G4"] = mean_grade
     newSheet["G5"] = median_grade
-    newSheet["G6"] = row_index
+    newSheet["G6"] = len(grades)
 
     # Apply autofilter
     newSheet.auto_filter.ref = f"A1:D{row_index}"
