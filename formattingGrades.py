@@ -54,11 +54,13 @@ def createWorksheet(course):
             grade = sourceSheet[f"C{row}"].value
             grades.append(grade)
     
+    # Calculate course statistics
     max_grade = max(grades)
     min_grade = min(grades)
     mean_grade = sum(grades) / len(grades)
     median_grade = statistics.median(grades)
 
+    # Print course statistics
     newSheet["G2"] = max_grade
     newSheet["G3"] = min_grade
     newSheet["G4"] = mean_grade
@@ -72,7 +74,9 @@ def createWorksheet(course):
 for course_name in ["Algebra", "Trigonometry", "Geometry", "Calculus", "Statistics"]:
     createWorksheet(course_name)
 
+# Remove uncleaned data worksheet
 myWorkbook.remove(sourceSheet)
+
 # Save and close the workbook
 myWorkbook.save("formatted_grades.xlsx")
 myWorkbook.close()
