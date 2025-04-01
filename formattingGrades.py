@@ -3,6 +3,7 @@
 # Description: A program that automatically formats and summarizes the important
 # information about each of the classes they teach
 
+#import libraries 
 import openpyxl
 from openpyxl import Workbook
 from openpyxl.styles import Font
