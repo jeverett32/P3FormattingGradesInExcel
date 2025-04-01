@@ -71,9 +71,16 @@ def createWorksheet(course):
     newSheet.auto_filter.ref = f"A1:D{row_index}"
 
 # Create sheets for different courses
-for course_name in ["Algebra", "Trigonometry", "Geometry", "Calculus", "Statistics"]:
-    createWorksheet(course_name)
+for row in range(2, sourceSheet.max_row +1):
+    cell = sourceSheet[f"A{row}"] #Get the current sheet in column A
+    if cell.value is None:
+        break #checking for an empty cell if we need to stop
+    
+    sheet_name = str(cell.value).strip()
 
+    if cell.value not in myWorkbook.sheetnames: #checking if the subject has already been made into a sheet
+        createWorksheet(sheet_name) #creating the sheet for that subject
+            
 # Remove uncleaned data worksheet
 myWorkbook.remove(sourceSheet)
 
